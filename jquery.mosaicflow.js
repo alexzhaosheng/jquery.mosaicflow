@@ -259,7 +259,7 @@
 		},
 
 		remove: function(elm) {
-			this.container.trigger('remove');
+			this.container.trigger('item_remove');
 			var column = elm.parents('.' + this.options.columnClass);
 
 			// Update column height
@@ -271,7 +271,7 @@
 			this.items = this.items.not(elm);
 			this.levelBottomEdge(this.itemsHeights, this.columnsHeights);
 			this.container.trigger('mosaicflow-layout');
-			this.container.trigger('removed');
+			this.container.trigger('item_removed');
 		},
 
 		empty: function() {
